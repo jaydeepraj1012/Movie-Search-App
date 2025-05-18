@@ -13,9 +13,8 @@ function MovieSearchApp() {
       return;
     }
     setLoading(true);
-    const response = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=2804451af6e88beb0b3478904a2b9ee3&query=${movieName}`
-    );
+    const response = await fetch(`/api/movies?movieName=${movieName}`);  
+    
     const MovieListdata = await response.json();
     console.log(MovieListdata);
     if (MovieListdata.Response === "False") {
