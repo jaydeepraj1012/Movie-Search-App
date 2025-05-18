@@ -18,7 +18,7 @@ function MovieListed({ movie }) {
           className="w-full h-full object-cover object-center"
           onError={(e) => {
             e.target.onerror = null;
-            e.target.src = "/api/placeholder/300/450";
+            e.target.src = "/src/assets/react.svg";
           }}
         />
       </div>
