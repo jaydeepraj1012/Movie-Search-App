@@ -15,11 +15,7 @@ function MovieListed({ movie }) {
         <img
          src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : "/src/assets/react.svg"}
           alt={movie.title}
-          className="w-full h-full object-cover object-center"
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = "/src/assets/react.svg";
-          }}
+          className="w-full h-full object-cover object-center"         
         />
       </div>
 
